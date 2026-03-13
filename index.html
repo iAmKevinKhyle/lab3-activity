@@ -1,115 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cavite State University - IT/CS Workshop 2026</title>
 
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="sub-container">
-            <span class="title">
-                <h2 class="light">Cavite State University</h2>
-                <h3 class="uppercase normal small highlight">IT/CS Workshop 2026</h3>
-            </span>
-            <nav class="navigation-bar">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#event">Event</a></li>
-                    <li><a href="#register">Register</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="sub-container">
+        <span class="title">
+          <h2 class="light">Cavite State University</h2>
+          <h3 class="uppercase normal small highlight">IT/CS Workshop 2026</h3>
+        </span>
+        <nav class="navigation-bar">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#event">Event</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <section class="content">
-        <div class="sub-container column">
-            <section class="home-section" id="home">
-                <h2>Cavite State University</h2>
-                <h1 class="uppercase highlight">IT/CS Workshop 2026</h1>
-                <button>Register Now!!!</button>
-            </section>
-            <section class="event-section" id="event">
-                <h1>Event Details</h1>
-                <span>Event: Cavite State University - IT/CS Workshop 2026</span>
-                <span>Venue: Cavite State University - Gymnasium</span>
-                <span>Date: October 1, 2026</span>
-                <span>Join our IT/CS Workshop 2026... Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illo
-                    cupiditate, at, facere nemo provident optio qui eos nihil laboriosam et atque laborum doloremque
-                    est!</span>
-            </section>
-            <section class="register-section" id="register">
-                <h1>Register Now</h1>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="fullname">Full Name</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-                    </div>
+      <div class="sub-container column">
+        <section class="home-section" id="home">
+          <h2>Cavite State University</h2>
+          <h1 class="uppercase highlight">IT/CS Workshop 2026</h1>
+          <a href="#register" class="button">Register Now!!!</a>
+        </section>
+        <section class="event-section" id="event">
+          <h1>Event Details</h1>
+          <span>Event: Cavite State University - IT/CS Workshop 2026</span>
+          <span>Venue: Cavite State University - Gymnasium</span>
+          <span>Date: October 1, 2026</span>
+          <span
+            >Join our IT/CS Workshop 2026... Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Eum illo cupiditate, at, facere nemo
+            provident optio qui eos nihil laboriosam et atque laborum doloremque
+            est!</span
+          >
+        </section>
+        <section class="register-section" id="register">
+          <h1>Register Now</h1>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
 
-                    <div class="form-group">
-                        <label for="course">Course</label>
-                        <select id="course">
-                            <option value="">--- Select your course ---</option>
-                            <option value="bsit">BS in Information Technology</option>
-                            <option value="bscs">BS in Computer Science</option>
-                        </select>
-                    </div>
+            <div class="form-group">
+              <label for="course">Course</label>
+              <select id="course">
+                <option value="">--- Select your course ---</option>
+                <option value="bsit">BS in Information Technology</option>
+                <option value="bscs">BS in Computer Science</option>
+              </select>
+            </div>
 
-                    <div class="form-group">
-                        <label>Grade Level</label>
-                        <div class="flex-row">
-                            <label class="check-item"><input type="radio" name="level" value="1st Year"> 1st
-                                Year</label>
-                            <label class="check-item"><input type="radio" name="level" value="2nd Year"> 2nd
-                                Year</label>
-                            <label class="check-item"><input type="radio" name="level" value="3rd Year"> 3rd
-                                Year</label>
-                            <label class="check-item"><input type="radio" name="level" value="4th Year"> 4th
-                                Year</label>
-                        </div>
-                    </div>
+            <div class="form-group">
+              <label>Grade Level</label>
+              <div class="flex-row">
+                <label class="check-item"
+                  ><input type="radio" name="level" value="1st Year" /> 1st
+                  Year</label
+                >
+                <label class="check-item"
+                  ><input type="radio" name="level" value="2nd Year" /> 2nd
+                  Year</label
+                >
+                <label class="check-item"
+                  ><input type="radio" name="level" value="3rd Year" /> 3rd
+                  Year</label
+                >
+                <label class="check-item"
+                  ><input type="radio" name="level" value="4th Year" /> 4th
+                  Year</label
+                >
+              </div>
+            </div>
 
-                    <div class="form-group">
-                        <label>Field of Interest</label>
-                        <div class="flex-row">
-                            <label class="check-item"><input type="checkbox" name="interest" value="Multimedia Arts">
-                                Multimedia Arts</label>
-                            <label class="check-item"><input type="checkbox" name="interest" value="Web Development">
-                                Web Development</label>
-                            <label class="check-item"><input type="checkbox" name="interest" value="Networking">
-                                Networking</label>
-                            <label class="check-item"><input type="checkbox" name="interest" value="Cybersecurity">
-                                Cybersecurity</label>
-                        </div>
-                    </div>
+            <div class="form-group">
+              <label>Field of Interest</label>
+              <div class="flex-row">
+                <label class="check-item"
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    value="Multimedia Arts"
+                  />
+                  Multimedia Arts</label
+                >
+                <label class="check-item"
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    value="Web Development"
+                  />
+                  Web Development</label
+                >
+                <label class="check-item"
+                  ><input type="checkbox" name="interest" value="Networking" />
+                  Networking</label
+                >
+                <label class="check-item"
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    value="Cybersecurity"
+                  />
+                  Cybersecurity</label
+                >
+              </div>
+            </div>
 
-                    <div class="button-group">
-                        <button type="submit" class="btn-submit">Register</button>
-                        <button type="reset" class="btn-reset">Reset</button>
-                    </div>
-                </form>
-            </section>
-        </div>
+            <div class="button-group">
+              <button type="submit" class="btn-submit">Register</button>
+              <button type="reset" class="btn-reset">Reset</button>
+            </div>
+          </form>
+        </section>
+      </div>
     </section>
     <footer>
-        <div class="sub-container">
-            <span class="copyright">
-                <p>Copyright 2026, All rights reserved</p>
-            </span>
-            <span class="contacts">
-                <span>Email: <a class="email"
-                        href="mailto:kevinkhyle.gepulle@cvsu.edu.ph">kevinkhyle.gepulle@cvsu.edu.ph</a></span>
-            </span>
-        </div>
+      <div class="sub-container">
+        <span class="copyright">
+          <p>Copyright 2026, All rights reserved</p>
+        </span>
+        <span class="contacts">
+          <span
+            >Email:
+            <a class="email" href="mailto:kevinkhyle.gepulle@cvsu.edu.ph"
+              >kevinkhyle.gepulle@cvsu.edu.ph</a
+            ></span
+          >
+        </span>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
