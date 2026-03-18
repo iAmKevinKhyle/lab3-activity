@@ -2,7 +2,7 @@ const registrationForm = document.getElementById("registration-form");
 
 registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const formData = Object.fromEntries(new FormData(e.target));
+  const formData = Object.fromEntries(new FormData(registrationForm));
   const yearlevel = document.querySelector(".year-level:checked");
 
   const interest = document.querySelectorAll(".interest");
@@ -35,6 +35,16 @@ registrationForm.addEventListener("submit", (e) => {
     return;
   }
 
-  alert("Registration Succesfull!");
+  const formatData = `
+  {
+    Fullname: "${formData.fullname}"
+    Email: "${formData.email}"
+    Course: "${formData.course}"
+    Year Level: "${formData.level}"
+    Interest: ${JSON.stringify(formData.interest)}
+  }
+  `;
+
+  alert(`Registration Succesfull! \n${formatData}`);
   registrationForm.submit();
 });
