@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cavite State University - IT/CS Workshop 2026</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
   </head>
 
   <body>
@@ -45,7 +46,7 @@
         </section>
         <section class="register-section" id="register">
           <h1>Register Now</h1>
-          <form action="#" method="post">
+          <form method="post" id="registration-form">
             <div class="form-group">
               <label for="fullname">Full Name</label>
               <input
@@ -53,7 +54,6 @@
                 id="fullname"
                 name="fullname"
                 placeholder="Enter your full name"
-                required
               />
             </div>
 
@@ -64,13 +64,12 @@
                 id="email"
                 name="email"
                 placeholder="Enter your email"
-                required
               />
             </div>
 
             <div class="form-group">
               <label for="course">Course</label>
-              <select id="course">
+              <select id="course" name="course">
                 <option value="">--- Select your course ---</option>
                 <option value="bsit">BS in Information Technology</option>
                 <option value="bscs">BS in Computer Science</option>
@@ -81,20 +80,40 @@
               <label>Grade Level</label>
               <div class="flex-row">
                 <label class="check-item"
-                  ><input type="radio" name="level" value="1st Year" /> 1st
-                  Year</label
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="1st Year"
+                    class="year-level"
+                  />
+                  1st Year</label
                 >
                 <label class="check-item"
-                  ><input type="radio" name="level" value="2nd Year" /> 2nd
-                  Year</label
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="2nd Year"
+                    class="year-level"
+                  />
+                  2nd Year</label
                 >
                 <label class="check-item"
-                  ><input type="radio" name="level" value="3rd Year" /> 3rd
-                  Year</label
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="3rd Year"
+                    class="year-level"
+                  />
+                  3rd Year</label
                 >
                 <label class="check-item"
-                  ><input type="radio" name="level" value="4th Year" /> 4th
-                  Year</label
+                  ><input
+                    type="radio"
+                    name="level"
+                    value="4th Year"
+                    class="year-level"
+                  />
+                  4th Year</label
                 >
               </div>
             </div>
@@ -107,6 +126,7 @@
                     type="checkbox"
                     name="interest"
                     value="Multimedia Arts"
+                    class="interest"
                   />
                   Multimedia Arts</label
                 >
@@ -115,11 +135,17 @@
                     type="checkbox"
                     name="interest"
                     value="Web Development"
+                    class="interest"
                   />
                   Web Development</label
                 >
                 <label class="check-item"
-                  ><input type="checkbox" name="interest" value="Networking" />
+                  ><input
+                    type="checkbox"
+                    name="interest"
+                    value="Networking"
+                    class="interest"
+                  />
                   Networking</label
                 >
                 <label class="check-item"
@@ -127,6 +153,7 @@
                     type="checkbox"
                     name="interest"
                     value="Cybersecurity"
+                    class="interest"
                   />
                   Cybersecurity</label
                 >
