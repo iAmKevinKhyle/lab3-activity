@@ -1,50 +1,58 @@
-const registrationForm = document.getElementById("registration-form");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("registration-form");
 
-registrationForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = Object.fromEntries(new FormData(registrationForm));
-  const yearlevel = document.querySelector(".year-level:checked");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  const interest = document.querySelectorAll(".interest");
-  const interestArr = [];
-  interest.forEach((value) =>
-    value.checked ? interestArr.push(value.value) : "",
-  );
+    const fullname = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const course = document.getElementById("course").value;
 
-  formData.level = yearlevel ? yearlevel.value : "";
-  formData.interest = interestArr;
+    const yearLevel = document.querySelector(".year-level:checked");
+    const interests = document.querySelectorAll(".interest:checked");
 
-  if (formData.fullname === "") {
-    alert("Fullname cannot be empty.");
-    return;
-  }
-  if (formData.email === "") {
-    alert("Email cannot be empty.");
-    return;
-  }
-  if (formData.course === "") {
-    alert("Please select a course.");
-    return;
-  }
-  if (formData.level === null || formData.level === "") {
-    alert("Please select your grade level.");
-    return;
-  }
-  if (formData.interest.length <= 0) {
-    alert("Please select atleast one Interest.");
-    return;
-  }
+    let errors = [];
 
-  const formatData = `
-  {
-    Fullname: "${formData.fullname}"
-    Email: "${formData.email}"
-    Course: "${formData.course}"
-    Year Level: "${formData.level}"
-    Interest: ${JSON.stringify(formData.interest)}
-  }
-  `;
+    if (fullname === "") {
+      errors.push("Full Name is required.");
+    }
 
-  alert(`Registration Succesfull! \n${formatData}`);
-  registrationForm.submit();
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email === "") {
+      errors.push("Email is required.");
+    } else if (!email.match(emailPattern)) {
+      errors.push("Enter a valid email address.");
+    }
+
+    if (course === "") {
+      errors.push("Please select a course.");
+    }
+
+    if (!yearLevel) {
+      errors.push("Please select your year level.");
+    }
+
+    if (interests.length === 0) {
+      errors.push("Select at least one field of interest.");
+    }
+
+    if (errors.length > 0) {
+      showMessage(errors.join("\n"));
+    } else {
+      showMessage("Registration Successful! 🎉", false);
+
+      // OPTIONAL: reset form
+      form.reset();
+    }
+  });
+
+  const showMessage = (message, isError = true) => {
+    const msg = document.createElement("div");
+    msg.className = isError ? "form-error" : "form-success";
+    msg.innerText = message;
+
+    document.body.appendChild(msg);
+
+    setTimeout(() => msg.remove(), 3000);
+  };
 });

@@ -1,0 +1,80 @@
+/* =========================
+   CONTENT
+========================= */
+.contact-section {
+  background: rgba(50, 50, 50, 0.4);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 158, 17, 0.2);
+}
+
+.contact-section h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-section h2 span {
+  color: white;
+  font-weight: 400;
+}
+
+.contact-section span {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+}
+
+/* Contact Info Grid */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Each contact box */
+.contact-info span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: 100%;
+}
+
+/* Hover effect */
+.contact-info span:hover {
+  transform: translateY(-4px);
+}
+
+/* Strong labels highlight */
+.contact-info span strong {
+  color: #119e11; /* green accent */
+  font-weight: 600;
+}
+
+/* Links style */
+.contact-info span a {
+  color: white;
+  transition: color 0.2s;
+}
+
+.contact-info span a:hover {
+  text-decoration: underline;
+  color: #0d7a0d;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1.5rem;
+  }
+}
