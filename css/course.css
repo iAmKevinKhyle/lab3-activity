@@ -76,6 +76,10 @@
   transform: scale(1.05);
 }
 
+.center {
+  text-align: center;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .course {

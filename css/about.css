@@ -1,0 +1,74 @@
+/* ABOUT PAGE STYLES */
+
+/* Page spacing */
+.content {
+  padding: 2rem 0;
+}
+
+/* About Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Sections */
+.about-section {
+  /* background: #ffffff; */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(17, 158, 17, 0.2);
+}
+
+.about-section h2 {
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+.about-section ul {
+  padding-left: 1.2rem;
+}
+
+.about-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Mission & Vision Cards */
+.mission,
+.vision {
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.mission h4,
+.vision h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* Flex layout for cards */
+.about-section div {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section div {
+    flex-direction: column;
+  }
+}

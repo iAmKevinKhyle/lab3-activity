@@ -83,10 +83,18 @@ header .sub-container {
   text-decoration: none;
   color: #f5f5f5;
   transition: 0.3s;
+  padding: 0.25rem 0;
 }
 
 .navigation-bar a:hover {
+  color: rgba(17, 158, 17, 0.75);
+  border-bottom: 2px solid rgba(17, 158, 17, 0.75);
+}
+
+/* Active Nav Button */
+.navigation-bar a.active {
   color: rgba(17, 158, 17, 1);
+  font-weight: 500;
 }
 
 /* HOME SECTION */
@@ -298,7 +306,18 @@ footer {
   z-index: 2;
 }
 
+.btn-more:hover,
 .btn-event:hover {
   background: rgb(12, 120, 12);
   transform: scale(1.05);
+}
+
+.btn-more {
+  background-color: rgba(17, 158, 17, 1);
+  color: #fff;
+  padding: 6px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
 }

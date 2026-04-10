@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       showMessage("Registration Successful! 🎉", false);
 
-      // OPTIONAL: reset form
       form.reset();
     }
   });
