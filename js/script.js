@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registration-form");
-
-  form.addEventListener("submit", (e) => {
+  const cvsuPin = document.getElementById("cvsu-pin");
+  const loader = document.querySelector(".loader");
+  
+  form?.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const fullname = document.getElementById("fullname").value.trim();
@@ -44,6 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     }
   });
+
+  let loaded = false;
+
+  cvsuPin?.addEventListener("load", function () {
+    loaded = true;
+    loader.style.display = "none";
+
+    
+    setTimeout(() => {
+      if (!loaded) {
+        loader.style.display = "flex";
+      }
+    }, 8000);
+  })
+
 
   const showMessage = (message, isError = true) => {
     const msg = document.createElement("div");

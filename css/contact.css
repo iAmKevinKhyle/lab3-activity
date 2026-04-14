@@ -63,6 +63,14 @@
   color: #0d7a0d;
 }
 
+.map-container {
+  height: 500px;
+  position: relative;
+  border: 1px solid rgba(17, 158, 17, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
 /* For smaller screens */
 @media (max-width: 600px) {
   .contact-info {
@@ -77,4 +85,33 @@
   .contact-section {
     padding: 1.5rem;
   }
+}
+
+/* loader */
+/* HTML: <div class="loader"></div> */
+#cvsu-pin {
+  position: absolute;
+  border: 1px solid rgba(17, 158, 17, 0.2);
+}
+
+.loader {
+  position: absolute;     
+  left: calc(50% - 42.5px);
+  top: calc(50% - 12.5px  ); 
+  width: 85px;
+  height: 25px;
+  --g1:conic-gradient(from  90deg at left   3px top   3px,#0000 90deg,#0d7a0d 0);
+  --g2:conic-gradient(from -90deg at bottom 3px right 3px,#0000 90deg,#0d7a0d 0);
+  background:var(--g1),var(--g1),var(--g1), var(--g2),var(--g2),var(--g2);
+  background-position: left,center,right;
+  background-repeat: no-repeat;
+  animation: l8 1s infinite;
+}
+@keyframes l8 {
+  0%   {background-size:25px 100%,25px 100%,25px 100%}
+  20%  {background-size:25px 50% ,25px 100%,25px 100%}
+  40%  {background-size:25px 50% ,25px 50% ,25px 100%}
+  60%  {background-size:25px 100%,25px 50% ,25px 50% }
+  80%  {background-size:25px 100%,25px 100%,25px 50% }
+  100% {background-size:25px 100%,25px 100%,25px 100%}
 }
