@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registration-form");
+  const contactForm = document.getElementById("contact-form");
   const cvsuPin = document.getElementById("cvsu-pin");
   const loader = document.querySelector(".loader");
   
@@ -61,6 +62,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 8000);
   })
 
+  contactForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const fullname = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value;
+
+    let errors = [];
+
+    if (fullname === "") {
+      errors.push("Full Name is required.");
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email === "") {
+      errors.push("Email is required.");
+    } else if (!email.match(emailPattern)) {
+      errors.push("Enter a valid email address.");
+    }
+
+    if (message === "") {
+      errors.push("Message is required.");
+    }
+
+    if (errors.length > 0) {
+      showMessage(errors.join("\n"));
+    } else {
+      showMessage("Message has been sent successfully! 🎉", false);
+
+      contactForm.reset();
+    }
+  });
 
   const showMessage = (message, isError = true) => {
     const msg = document.createElement("div");
