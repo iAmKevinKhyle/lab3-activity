@@ -261,6 +261,12 @@ footer {
   .card {
     width: 100%;
   }
+
+  .mission-vision-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 /* EVENT INVITE SECTION */
